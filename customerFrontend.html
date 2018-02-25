@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kyle Berkley</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="formChecker.js"></script>
+    </head>
+    <body onload="init()">
+        <div id="container">
+            <h1>Welcome! This store sells pictures of Eric Andre!</h1><br>
+            <h2>Sign in below to our very secure 100% NOT COMPROMISED database!</h2>
+            <form action="customerBackend.php" method="POST" onsubmit="return validateMe()" id="ex3form">
+                <input type="text" placeholder="E-mail" name="Username" max="240">
+                <input type="password" placeholder="Password" name="Password" max="64">
+                <br><br>
+                <div>
+                    <h2>Here's what we have to offer:</h2>
+                    <div class="item">
+                        <h4>Picture 1:</h4>
+                        <img src="ea1.jpg"><br>
+                        $25: <input type="checkbox" class="picCheck" id="1"><br>
+                        <input type="number" min="0" id="p1" class="invisible" placeholder="Quantity" name="25"><br>
+                    </div>
+                    <div class="item">
+                        <h4>Picture 2:</h4>
+                        <img src="ea2.jpg"><br>
+                        $800:<input type="checkbox" class="picCheck" id="2"><br>
+                        <input type="number" min="0" id="p2" class="invisible" placeholder="Quantity" name="800"><br>
+                    </div>
+                    <div class="item">
+                        <h4>Picture 3:</h4>
+                        <img src="ea4.jpg"><br>
+                        $2,200:<input type="checkbox" class="picCheck" id="3"><br>
+                        <input type="number" min="0" id="p3" class="invisible" placeholder="Quantity" name="2200"><br>
+                    </div>
+                    <div class="item">
+                        <h4>Picture 4:</h4>
+                        <img src="ea5.jpg"><br>
+                        $15,000:<input type="checkbox" class="picCheck" id="4"><br>
+                        <input type="number" min="0" id="p4" class="invisible" placeholder="Quantity" name="15000"><br>
+                    </div>
+                    <div class="item">
+                        <h4>Picture 5:</h4>
+                        <img src="ea3.jpg"><br>
+                        $85,000:<input type="checkbox" class="picCheck" id="5"><br>
+                        <input type="number" min="0" id="p5" class="invisible" placeholder="Quantity" name="85000"><br>
+                    </div>
+                    <div class="item">
+                        <h4>Picture 6 (Very Rare):</h4>
+                        <img src="ea6.PNG"><br>
+                        $1,000,000:<input type="checkbox" class="picCheck" id="6"><br>
+                        <input type="number" min="0" id="p6" class="invisible" placeholder="Quantity" name="1000000"><br>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>How quickly would you like it delivered?</h3>
+                    One Week - FREE <input type="radio" name="delivery" id="free" value="0"><br>
+                    Three Days - $5 <input type="radio" name="delivery" id="3day" value="5"><br>
+                    Overnight - $50 <input type="radio" name="delivery" id="tmrw" value="50"><br>
+                </div>
+                <br>
+                <div>
+                    <button type="button" onclick="reset(); removeQuants();">Reset Order</button>
+                    <input type="submit" value="Submit Order">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
